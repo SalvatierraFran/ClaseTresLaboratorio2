@@ -35,6 +35,9 @@ namespace ClaseTresLaboratorio2_01
                     binarioAux = division + binarioAux;
                     flag = 1;
                 }
+
+                aux = division;
+
             } while (flag == 0);
 
             return binarioAux;
