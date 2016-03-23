@@ -16,24 +16,24 @@ namespace ClaseTresLaboratorio2_01
             string binarioAux = "";
             do
             {
-                modulo = aux % 2;
-                division = (int)aux / 2;
+                modulo = aux % 2;//Obtengo los restos para ir acumulando hasta llegar al resultado.
+                division = (int)aux / 2;//Obtengo el resultado para ir diviendo hasta llegar al resultado.
 
-                if (modulo == 0)
+                if (modulo == 0)//If para acumular los 0.
                 {
                     binarioAux = "0" + binarioAux;
                 }
 
-                if (modulo == 1)
+                if (modulo == 1)//If para acumular los 1.
                 {
                     binarioAux = "1" + binarioAux;
                 }
 
-                if (division == 1 || division == 0)
+                if (division == 1 || division == 0)//If para comprobar si se puede seguir diviendo.
                 {
                     Convert.ToString(division);
-                    binarioAux = division + binarioAux;
-                    flag = 1;
+                    binarioAux = division + binarioAux;//Operacion para incluir el ultimo resultado de la division en el binario.
+                    flag = 1;//bandera que indica que no se puede seguir diviendo.
                 }
 
                 aux = division;
@@ -51,8 +51,8 @@ namespace ClaseTresLaboratorio2_01
 
             for (int i = 0; i < auxiliar.Length; i++)
             {
-                if ((auxiliar.Substring(i, 1)) == "1")
-                {
+                if ((auxiliar.Substring(i, 1)) == "1")//Cada vez que se encuentre un 1 en la posicion que marca i se procedera
+                {                                     //a sumar las potencias segun el valor de h  
                     ConvertidoDecimal = ConvertidoDecimal + (Math.Pow(2, h));
                 }
                 h--;
