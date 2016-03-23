@@ -17,7 +17,7 @@ namespace ClaseTresLaboratorio2_01
             do
             {
                 modulo = aux % 2;
-                division = aux / 2;
+                division = (int)aux / 2;
 
                 if (modulo == 0)
                 {
@@ -38,6 +38,24 @@ namespace ClaseTresLaboratorio2_01
             } while (flag == 0);
 
             return binarioAux;
+        }
+
+        public static double BinarioDecimal(string auxiliar)
+        {
+            double ConvertidoDecimal = 0;
+
+            int h = auxiliar.Length - 1;
+
+            for (int i = 0; i < auxiliar.Length; i++)
+            {
+                if ((auxiliar.Substring(i, 1)) == "1")
+                {
+                    ConvertidoDecimal = ConvertidoDecimal + (Math.Pow(2, h));
+                }
+                h--;
+            }
+
+            return ConvertidoDecimal;
         }
     }
 }

@@ -10,6 +10,7 @@ namespace ClaseTresLaboratorio2_01
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
